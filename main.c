@@ -8,6 +8,7 @@ int main(int argc, char *argv[])
   
   x = 2;
   z = 1;
+  
   a = 3;
   b = 4;;
   c = 5;
