@@ -3,21 +3,32 @@
 
 int main(int argc, char *argv[])
 {
-  int x,  y, z, m;
-  int a, b, c;
+  int num1, num2;
+  int x, y, z, m;
+  float k;
   
-  x = 2;
-  z = 1;
+  printf("Enter the first integers: ");
+  scanf("%d", &num1);
   
-  a = 3;
-  b = 4;;
-  c = 5;
+  printf("Entser the second integers: ");
+  scanf("%d", &num2);
   
-  y = a*x^2 + b*x + c;
-  
-  m = (x + y + z)/3;
-  
-  printf("y = %d, m = %d\n", y, m);
+  if (num2 == 0){
+        printf("Error: You can't divide a number with 0");
+        }
+        else {
+             x = num1 + num2;
+             y = num1 - num2;
+             z = num1*num2;
+             k = (float)num1/num2;
+             m = num1 % num2;
+             }
+             
+  printf("+ result is %d\n", x);
+  printf("- result is %d\n", y);
+  printf("* result is %d\n", z);
+  printf("/ result is %.2f\n", k);
+  printf("%% result is %d\n", m);
   
   system("PAUSE");	
   return 0;
