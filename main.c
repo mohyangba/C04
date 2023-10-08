@@ -3,26 +3,20 @@
 
 int main(int argc, char *argv[])
 {
-    int a;
+    unsigned int x;
+    int b;
     
-    //1. 4로 나누어 떨어져야 함
+    printf("input a number : "); 
+    scanf("%ui", &x);
     
-    //2. 100으로 나누어 떨어지지 않아야 함
-    
-    //3. 위를 만족하지 않아도 400으로 나누어 떨어짐
-    
-    printf("input a year : "); 
-    scanf("%i", &a);
-    
-    if ( (a%4==0 && a%100!=0) || (a%400==0) )
+    for (b=0; x!=0; x>>=1) // -> x =x >> 1
     {
-         printf("%i is leap year.\n", a);
+        if (x & 1)
+        {
+              b++;
+        }
     }
-    else
-    {
-
-        printf("%i is not leap year.\n", a);
-    }
+    printf("The result is : %i\n", b);
     
   system("PAUSE");
   return 0;
