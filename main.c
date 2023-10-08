@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
   printf("Enter the first integers: ");
   scanf("%d", &num1);
   
-  printf("Entser the second integers: ");
+  printf("Enter the second integers: ");
   scanf("%d", &num2);
   
   if (num2 == 0){
@@ -30,6 +30,6 @@ int main(int argc, char *argv[])
   printf("/ result is %.2f\n", k);
   printf("%% result is %d\n", m);
   
-  system("PAUSE");	
+  system("PAUSE");
   return 0;
 }
