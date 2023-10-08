@@ -3,21 +3,18 @@
 
 int main(int argc, char *argv[])
 {
-    unsigned int x;
-    int b;
+    int seconds, hours, minutes, resultseconds;
     
-    printf("input a number : "); 
-    scanf("%ui", &x);
-    
-    for (b=0; x!=0; x>>=1) // -> x =x >> 1
-    {
-        if (x & 1)
-        {
-              b++;
-        }
-    }
-    printf("The result is : %i\n", b);
-    
+    printf("input the total seconds : ");
+    scanf("%d", &seconds);
+
+    hours = seconds / 3600;
+    seconds %= 3600;
+    minutes = seconds / 60;
+    resultseconds = seconds % 60;
+
+    printf("%d:%02d:%02d\n", hours, minutes, resultseconds);
+
   system("PAUSE");
   return 0;
 }
